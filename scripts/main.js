@@ -23,7 +23,7 @@ function imageFromThumb(thumbnail) {
 function titleFromThumb(thumbnail) {
     'use strict';
     return thumbnail.getAttribute('data-image-title');
-  }  
+}  
 
 function setDetailsFromThumb(thumbnail) {
     'use strict';
@@ -77,6 +77,10 @@ function initializeEvents() {
     var thumbnails = getThumbnailsArray();
     thumbnails.forEach(addThumbClickHandler);
     addKeyPressHandler();
+}
+
+function nextArrow(params) {
+    
 }
 
 initializeEvents();

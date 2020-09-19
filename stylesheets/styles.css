@@ -101,18 +101,19 @@ a {
     font-size: 18px;
   }
  
-  .detail-image-container { 
-      flex: 1 1 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+.detail-image-container { 
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
-  .detail-image-frame{
-      position: relative;
-      text-align: center;
+.detail-image-frame{
+    position: relative;
+    text-align: center;
 
-      transition: transform 333ms cubic-bezier(1, .06, .28, 1);
+    transition: transform 333ms cubic-bezier(1, .06, .28, 1);
   }
 
   .is-tiny {
@@ -147,3 +148,37 @@ a {
   .hidden.detail .thumbnail-item{
       max-width: 80%;
   }
+
+  .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -28px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+  }
+
+  .next {
+      right: 0 -1px;
+      /* position: absolute; */
+      border-radius: 3px 3px 3px 3px;
+  }
+
+  .prev {
+      left: -9px;
+      /* position: absolute; */
+      border-radius: 3px 3px 3px 3px;
+  }
+
+  .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+  /* need to add functionality to the buttons */
